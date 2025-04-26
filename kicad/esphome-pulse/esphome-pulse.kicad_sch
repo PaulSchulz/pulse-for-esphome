@@ -176,29 +176,30 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "LED:APA-106-F5"
+		(symbol "LED:NeoPixel_THT"
+			(pin_names
+				(offset 0.254)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "D"
-				(at 5.08 5.715 0)
+			(property "Reference" "D3"
+				(at 12.7 6.4202 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right bottom)
 				)
 			)
-			(property "Value" "APA-106-F5"
-				(at 1.27 -5.715 0)
+			(property "Value" "WS2812B_THT"
+				(at 12.7 3.8802 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 			)
-			(property "Footprint" "LED_THT:LED_D5.0mm-4_RGB"
+			(property "Footprint" "LED_THT:LED_D5.0mm-4_RGB_Staggered_Pins"
 				(at 1.27 -7.62 0)
 				(effects
 					(font
@@ -208,7 +209,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://cdn.sparkfun.com/datasheets/Components/LED/COM-12877.pdf"
+			(property "Datasheet" ""
 				(at 2.54 -9.525 0)
 				(effects
 					(font
@@ -218,7 +219,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "RGB LED with integrated controller, 5mm Package"
+			(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
 				(at 0 0 0)
 				(effects
 					(font
@@ -227,7 +228,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "RGB LED addressable 8bit pwm 5bit greyscale"
+			(property "ki_keywords" "RGB LED NeoPixel addressable"
 				(at 0 0 0)
 				(effects
 					(font
@@ -236,7 +237,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "LED*D5.0mm*RGB*"
+			(property "ki_fp_filters" "LED*D5.0mm* LED*D8.0mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -245,7 +246,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "APA-106-F5_0_0"
+			(symbol "NeoPixel_THT_0_0"
 				(text "RGB"
 					(at 2.286 -4.191 0)
 					(effects
@@ -255,7 +256,18 @@
 					)
 				)
 			)
-			(symbol "APA-106-F5_0_1"
+			(symbol "NeoPixel_THT_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(polyline
 					(pts
 						(xy 1.27 -2.54) (xy 1.778 -2.54)
@@ -340,30 +352,19 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start 5.08 5.08)
-					(end -5.08 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
 			)
-			(symbol "APA-106-F5_1_1"
+			(symbol "NeoPixel_THT_1_1"
 				(pin input line
-					(at -7.62 2.54 0)
+					(at -7.62 0 0)
 					(length 2.54)
-					(name "DI"
+					(name "DIN"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -381,7 +382,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -408,16 +409,16 @@
 					)
 				)
 				(pin output line
-					(at 7.62 2.54 180)
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "DO"
+					(name "DOUT"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1371,10 +1372,10 @@
 		(uuid "39276f75-cab4-499e-9cf6-45fe4ef2032a")
 	)
 	(junction
-		(at 193.04 114.3)
+		(at 193.04 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a51acedb-ff26-4060-bb7b-edbc994a3003")
+		(uuid "4dd921fe-fe8e-46ee-9548-c7b542aee1ab")
 	)
 	(no_connect
 		(at 160.02 99.06)
@@ -1407,10 +1408,6 @@
 	(no_connect
 		(at 93.98 97.79)
 		(uuid "35fa2f52-f280-4d73-afd0-6d51898e186d")
-	)
-	(no_connect
-		(at 212.09 104.14)
-		(uuid "3d1ad85f-1f1d-4e3c-b946-157e75494b12")
 	)
 	(no_connect
 		(at 93.98 82.55)
@@ -1461,6 +1458,10 @@
 		(uuid "c517d4f0-4ef2-4ec8-ae2f-a01a57b3fc28")
 	)
 	(no_connect
+		(at 212.09 109.22)
+		(uuid "db9c03ee-2630-4ad2-89cb-c385beab4610")
+	)
+	(no_connect
 		(at 160.02 93.98)
 		(uuid "e62f3844-9d11-4904-9e3a-7b62615dc3db")
 	)
@@ -1470,23 +1471,23 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 43.18) (xy 179.07 104.14)
+			(xy 193.04 123.19) (xy 204.47 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07d2f711-1c13-466a-b72e-85bf2c5b6e12")
+	)
+	(wire
+		(pts
+			(xy 179.07 43.18) (xy 179.07 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1da82f03-f9aa-4e42-8a89-05fe3f010313")
-	)
-	(wire
-		(pts
-			(xy 193.04 114.3) (xy 204.47 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31a8a40b-cd9d-4d3c-bf29-d339d5e21021")
 	)
 	(wire
 		(pts
@@ -1510,23 +1511,13 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 104.14) (xy 196.85 104.14)
+			(xy 193.04 123.19) (xy 193.04 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4738b7ae-8162-4ecb-86a3-7d0d8d686e14")
-	)
-	(wire
-		(pts
-			(xy 193.04 77.47) (xy 193.04 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "47740f2c-4f49-4ccf-a690-b1c0558d5f89")
+		(uuid "55c1bb39-72f1-4246-998f-ac1a525f87ae")
 	)
 	(wire
 		(pts
@@ -1560,13 +1551,13 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 96.52) (xy 204.47 99.06)
+			(xy 204.47 116.84) (xy 204.47 123.19)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a12b614a-6d29-40c5-9f7b-8873c3190d8e")
+		(uuid "a2dd80b9-568a-461f-8116-a7bb2efa448a")
 	)
 	(wire
 		(pts
@@ -1597,6 +1588,16 @@
 			(type default)
 		)
 		(uuid "bcab22be-8ed9-4d38-a824-bae2c23f2fdb")
+	)
+	(wire
+		(pts
+			(xy 204.47 96.52) (xy 204.47 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0fcfef8-379f-4f18-ae7d-2becc13d9fd6")
 	)
 	(wire
 		(pts
@@ -1680,6 +1681,16 @@
 	)
 	(wire
 		(pts
+			(xy 179.07 109.22) (xy 196.85 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec65697c-f466-4141-b41d-ca2df67f3564")
+	)
+	(wire
+		(pts
 			(xy 129.54 139.7) (xy 129.54 143.51)
 		)
 		(stroke
@@ -1700,7 +1711,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 143.51) (xy 193.04 114.3)
+			(xy 193.04 77.47) (xy 193.04 123.19)
 		)
 		(stroke
 			(width 0)
@@ -2048,82 +2059,6 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:APA-106-F5")
-		(at 204.47 106.68 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf353421-cc2c-4db6-a86b-2cb901ef5141")
-		(property "Reference" "D1"
-			(at 217.17 97.7198 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "APA-106-F5"
-			(at 217.17 100.2598 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D5.0mm-4_RGB_Staggered_Pins"
-			(at 205.74 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://cdn.sparkfun.com/datasheets/Components/LED/COM-12877.pdf"
-			(at 207.01 116.205 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller, 5mm Package"
-			(at 204.47 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f137ca1a-e471-433b-a569-7382bb904f11")
-		)
-		(pin "2"
-			(uuid "f440ca9e-aa7c-4bc8-b781-9c0a79bfccd8")
-		)
-		(pin "3"
-			(uuid "48956229-ca73-419c-8791-f164ac5327a9")
-		)
-		(pin "4"
-			(uuid "eba89bdb-96be-4e6f-847f-138e6e3698fd")
-		)
-		(instances
-			(project ""
-				(path "/236085cd-1dc4-4e54-9986-bb234567d56c"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Audio:AudioJack2_Ground")
 		(at 205.74 52.07 0)
 		(mirror y)
@@ -2189,6 +2124,82 @@
 			(project ""
 				(path "/236085cd-1dc4-4e54-9986-bb234567d56c"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 204.47 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e540cc1d-15db-4a06-ad72-ccad91007073")
+		(property "Reference" "D3"
+			(at 217.17 102.7998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B_THT"
+			(at 217.17 105.3398 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm-4_RGB_Staggered_Pins"
+			(at 205.74 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 207.01 118.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 204.47 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c7568f09-73a1-46bb-a32a-2bafabe25df9")
+		)
+		(pin "3"
+			(uuid "d0b6cd98-121c-42ae-82c3-21f3861206a3")
+		)
+		(pin "4"
+			(uuid "55ebf798-b9ea-469b-8963-381ae4eed826")
+		)
+		(pin "1"
+			(uuid "1310aecc-922b-4be5-8e23-61e2becb4fb1")
+		)
+		(instances
+			(project ""
+				(path "/236085cd-1dc4-4e54-9986-bb234567d56c"
+					(reference "D3")
 					(unit 1)
 				)
 			)

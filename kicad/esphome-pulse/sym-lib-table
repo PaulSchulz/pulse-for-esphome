@@ -1,4 +1,5 @@
 (sym_lib_table
   (version 7)
   (lib (name "m5stamp-new")(type "KiCad")(uri "${KIPRJMOD}/m5stamp-new.kicad_sym")(options "")(descr ""))
+  (lib (name "custom")(type "KiCad")(uri "${KIPRJMOD}/custom.kicad_sym")(options "")(descr ""))
 )
