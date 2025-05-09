@@ -4,178 +4,10 @@
 	(generator_version "9.0")
 	(uuid "236085cd-1dc4-4e54-9986-bb234567d56c")
 	(paper "A4")
+	(title_block
+		(title "ESPHome Pulse")
+	)
 	(lib_symbols
-		(symbol "Connector_Audio:AudioJack2_Ground"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J2"
-				(at -0.635 8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "AudioJack2_Ground"
-				(at -0.635 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Connector_Audio:Jack_3.5mm_CUI_SJ1-3523N_Horizontal"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Audio Jack, 2 Poles (Mono / TS), Grounded Sleeve"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "audio jack receptacle mono phone headphone TS connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Jack*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "AudioJack2_Ground_0_1"
-				(rectangle
-					(start -2.54 -2.54)
-					(end -3.81 0)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0.635 -0.635) (xy 1.27 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 2.54 3.81)
-					(end -2.54 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy -0.635 2.54) (xy -0.635 0) (xy -1.27 -0.635) (xy -1.905 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "AudioJack2_Ground_1_1"
-				(pin power_out line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "T"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "LED:NeoPixel_THT"
 			(pin_names
 				(offset 0.254)
@@ -1007,6 +839,223 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "nathanhborger-PJ-320A:PJ-320A"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PJ-320A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PJ-320A_0_1"
+				(rectangle
+					(start -3.175 1.27)
+					(end 3.175 1.905)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 13.335) (xy -0.635 16.51) (xy 0.635 16.51) (xy 1.905 13.335) (xy -1.905 13.335)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.905 12.7)
+					(end 1.905 13.335)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.905 9.525)
+					(end 1.905 12.7)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.905 8.89)
+					(end 1.905 9.525)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.905 5.715)
+					(end 1.905 8.89)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.905 5.08)
+					(end 1.905 5.715)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.905 1.905)
+					(end 1.905 5.08)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PJ-320A_1_1"
+				(pin bidirectional line
+					(at 0.635 14.605 180)
+					(length 2.0066)
+					(name "Tip"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.6096 0.6096)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 0.635 10.795 180)
+					(length 2.54)
+					(name "Ring1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 0.6096 0.6096)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 0.635 6.985 180)
+					(length 2.54)
+					(name "Ring2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 0.6096 0.6096)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 0.635 3.175 180)
+					(length 2.54)
+					(name "Sleeve"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.6096 0.6096)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers
@@ -1366,16 +1415,16 @@
 		(uuid "2f45ba1e-5824-470e-9c68-84e52bb6f3bb")
 	)
 	(junction
+		(at 203.2 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d45a40b-3b2d-4690-801b-de4194427c8d")
+	)
+	(junction
 		(at 129.54 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "39276f75-cab4-499e-9cf6-45fe4ef2032a")
-	)
-	(junction
-		(at 193.04 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4dd921fe-fe8e-46ee-9548-c7b542aee1ab")
+		(uuid "b16d2879-e381-40b8-a795-2f5f62f118bf")
 	)
 	(no_connect
 		(at 160.02 99.06)
@@ -1458,7 +1507,7 @@
 		(uuid "c517d4f0-4ef2-4ec8-ae2f-a01a57b3fc28")
 	)
 	(no_connect
-		(at 212.09 109.22)
+		(at 198.12 62.23)
 		(uuid "db9c03ee-2630-4ad2-89cb-c385beab4610")
 	)
 	(no_connect
@@ -1471,17 +1520,17 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 123.19) (xy 204.47 123.19)
+			(xy 91.44 64.77) (xy 91.44 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "07d2f711-1c13-466a-b72e-85bf2c5b6e12")
+		(uuid "18becc61-8c9d-4b36-b990-bda5fa478a4d")
 	)
 	(wire
 		(pts
-			(xy 179.07 43.18) (xy 179.07 109.22)
+			(xy 175.26 62.23) (xy 175.26 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1491,33 +1540,63 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 40.64) (xy 198.12 49.53)
+			(xy 191.77 116.84) (xy 190.5 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "32af8d14-f37f-4592-8ba6-cd470f31b759")
+		(uuid "2ce41384-f84b-4e84-a97a-7bff460e9fc1")
 	)
 	(wire
 		(pts
-			(xy 204.47 57.15) (xy 205.74 57.15)
+			(xy 129.54 143.51) (xy 203.2 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "397d05cc-d94c-4f87-a771-628f7497d152")
+		(uuid "3569a38c-8436-4900-bd58-51ad5b096f7a")
 	)
 	(wire
 		(pts
-			(xy 193.04 123.19) (xy 193.04 143.51)
+			(xy 237.49 38.1) (xy 238.76 38.1)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "55c1bb39-72f1-4246-998f-ac1a525f87ae")
+		(uuid "37f12502-1132-4884-81e8-a274c9a4ad47")
+	)
+	(wire
+		(pts
+			(xy 190.5 109.22) (xy 195.58 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46375915-8de5-4983-9111-7a6e359e4b34")
+	)
+	(wire
+		(pts
+			(xy 129.54 139.7) (xy 129.54 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "501eee26-da3e-4958-9b4c-47f475c6b14c")
+	)
+	(wire
+		(pts
+			(xy 190.5 78.74) (xy 203.2 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50712c3a-73db-42d5-8dd9-5ef89da16c4d")
 	)
 	(wire
 		(pts
@@ -1531,13 +1610,63 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 40.64) (xy 198.12 40.64)
+			(xy 190.5 120.65) (xy 203.2 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "789684ec-e745-479c-a1aa-b9de5144a33b")
+		(uuid "71972333-e59a-4db3-b2eb-851ea85f25d7")
+	)
+	(wire
+		(pts
+			(xy 91.44 45.72) (xy 172.72 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "797fb485-9da4-4f55-bfb6-5cbf6c44406e")
+	)
+	(wire
+		(pts
+			(xy 203.2 78.74) (xy 203.2 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c66d269-355c-4dff-af44-cf66cc335b94")
+	)
+	(wire
+		(pts
+			(xy 172.72 81.28) (xy 200.66 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89caf8bf-1ff4-4054-8c1d-030ccadae1bd")
+	)
+	(wire
+		(pts
+			(xy 190.5 54.61) (xy 190.5 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9667ef00-8c60-4ee3-a8e6-804ba24f8567")
+	)
+	(wire
+		(pts
+			(xy 190.5 69.85) (xy 190.5 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9709e7bd-65bb-4699-b692-bb23b5d92799")
 	)
 	(wire
 		(pts
@@ -1551,77 +1680,37 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 116.84) (xy 204.47 123.19)
+			(xy 200.66 81.28) (xy 200.66 113.03)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a2dd80b9-568a-461f-8116-a7bb2efa448a")
+		(uuid "b38452f7-57c4-49e5-817c-c022dcc73c42")
 	)
 	(wire
 		(pts
-			(xy 204.47 77.47) (xy 193.04 77.47)
+			(xy 172.72 45.72) (xy 172.72 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ae2e5dc7-b715-4256-9f54-503460c1e1df")
+		(uuid "b67f8ed1-2d25-407b-9b38-e47cb224a79e")
 	)
 	(wire
 		(pts
-			(xy 194.31 67.31) (xy 200.66 67.31)
+			(xy 203.2 120.65) (xy 203.2 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b7920c93-413d-413d-9db5-559b26905dbb")
+		(uuid "cd492265-ace9-4268-8daa-cf8fe0b1633b")
 	)
 	(wire
 		(pts
-			(xy 93.98 64.77) (xy 86.36 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bcab22be-8ed9-4d38-a824-bae2c23f2fdb")
-	)
-	(wire
-		(pts
-			(xy 204.47 96.52) (xy 204.47 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0fcfef8-379f-4f18-ae7d-2becc13d9fd6")
-	)
-	(wire
-		(pts
-			(xy 129.54 143.51) (xy 193.04 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5c7551b-bce1-482a-a91f-72240ef90165")
-	)
-	(wire
-		(pts
-			(xy 204.47 57.15) (xy 204.47 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c7bd7f00-4fbb-4baf-be9d-192f3026e3a2")
-	)
-	(wire
-		(pts
-			(xy 129.54 143.51) (xy 124.46 143.51)
+			(xy 124.46 143.51) (xy 129.54 143.51)
 		)
 		(stroke
 			(width 0)
@@ -1631,13 +1720,13 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 64.77) (xy 86.36 40.64)
+			(xy 195.58 107.95) (xy 195.58 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ddb75c94-939c-4dca-ae70-b01bd651b17e")
+		(uuid "dbba8cb0-2cbe-4984-bc33-6da739b567ce")
 	)
 	(wire
 		(pts
@@ -1651,6 +1740,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 64.77) (xy 91.44 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e153d41d-5b40-4850-8f1e-180a76749163")
+	)
+	(wire
+		(pts
 			(xy 93.98 85.09) (xy 88.9 85.09)
 		)
 		(stroke
@@ -1661,27 +1760,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 67.31) (xy 200.66 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5154dfa-dfcd-4f17-af18-c766c014a692")
-	)
-	(wire
-		(pts
-			(xy 198.12 49.53) (xy 200.66 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea245d94-7104-451b-9191-278ddddfeaad")
-	)
-	(wire
-		(pts
-			(xy 179.07 109.22) (xy 196.85 109.22)
+			(xy 175.26 62.23) (xy 182.88 62.23)
 		)
 		(stroke
 			(width 0)
@@ -1691,33 +1770,23 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 139.7) (xy 129.54 143.51)
+			(xy 200.66 113.03) (xy 190.5 113.03)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f3f8b526-a446-421c-8786-cdc373aadeb0")
+		(uuid "f23346e1-b6e5-4e14-84ed-af7020c501b7")
 	)
 	(wire
 		(pts
-			(xy 88.9 43.18) (xy 179.07 43.18)
+			(xy 88.9 43.18) (xy 175.26 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f7f6d3c0-cc9f-4eba-8db9-804ce6fc99a5")
-	)
-	(wire
-		(pts
-			(xy 193.04 77.47) (xy 193.04 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9ed3701-ad8f-40d4-86a3-a7b789e4621c")
 	)
 	(wire
 		(pts
@@ -1796,34 +1865,34 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 204.47 96.52 0)
+		(lib_id "nathanhborger-PJ-320A:PJ-320A")
+		(at 189.865 123.825 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "28dacfc2-559e-4fc8-9f0f-e8797f7178bf")
-		(property "Reference" "#PWR06"
-			(at 204.47 100.33 0)
+		(uuid "0f23e432-36a1-4d82-8733-98b3cfb67c42")
+		(property "Reference" "U2"
+			(at 191.262 123.952 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify right)
 			)
 		)
-		(property "Value" "+5V"
-			(at 204.47 91.44 0)
+		(property "Value" "PJ-320A"
+			(at 194.31 125.984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 204.47 96.52 0)
+		(property "Footprint" "nathanhborger-PJ-320A:PJ-320A"
+			(at 189.865 123.825 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1832,7 +1901,82 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 96.52 0)
+			(at 189.865 123.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 189.865 123.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "56a8df92-5546-41d7-ace3-af74e95808be")
+		)
+		(pin "2"
+			(uuid "8691acbc-21b0-41d8-bb8d-8762d191c79a")
+		)
+		(pin "3"
+			(uuid "f09362ac-5736-4e63-9f36-d0770a0d4000")
+		)
+		(pin "1"
+			(uuid "5e5147ca-811b-405a-a012-cfcdf1decdaa")
+		)
+		(instances
+			(project ""
+				(path "/236085cd-1dc4-4e54-9986-bb234567d56c"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 190.5 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "28dacfc2-559e-4fc8-9f0f-e8797f7178bf")
+		(property "Reference" "#PWR06"
+			(at 190.5 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 190.5 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.5 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1841,7 +1985,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 204.47 96.52 0)
+			(at 190.5 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1995,7 +2139,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 194.31 67.31 0)
+		(at 195.58 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2003,7 +2147,7 @@
 		(dnp no)
 		(uuid "cafc9101-2cb8-478e-8da0-979d18625b99")
 		(property "Reference" "#PWR09"
-			(at 194.31 71.12 0)
+			(at 195.58 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2012,7 +2156,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 194.31 62.23 0)
+			(at 195.58 103.632 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2020,7 +2164,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 194.31 67.31 0)
+			(at 195.58 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2029,7 +2173,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 194.31 67.31 0)
+			(at 195.58 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2038,7 +2182,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 194.31 67.31 0)
+			(at 195.58 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2059,79 +2203,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Audio:AudioJack2_Ground")
-		(at 205.74 52.07 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e39bc262-00a9-4c48-828c-812b26026eff")
-		(property "Reference" "J2"
-			(at 206.375 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AudioJack2_Ground"
-			(at 206.375 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_CUI_SJ1-3523N_Horizontal"
-			(at 205.74 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 205.74 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Audio Jack, 2 Poles (Mono / TS), Grounded Sleeve"
-			(at 205.74 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "G"
-			(uuid "0ee0695d-06c7-42b0-a612-8e6812392926")
-		)
-		(pin "T"
-			(uuid "02c15458-7e40-45d6-b8dd-d954c9128e9c")
-		)
-		(pin "S"
-			(uuid "02207956-9177-45ce-8506-3f77ca314ada")
-		)
-		(instances
-			(project ""
-				(path "/236085cd-1dc4-4e54-9986-bb234567d56c"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "LED:NeoPixel_THT")
-		(at 204.47 109.22 0)
+		(at 190.5 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2140,7 +2213,7 @@
 		(fields_autoplaced yes)
 		(uuid "e540cc1d-15db-4a06-ad72-ccad91007073")
 		(property "Reference" "D3"
-			(at 217.17 102.7998 0)
+			(at 203.2 55.8098 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2148,7 +2221,7 @@
 			)
 		)
 		(property "Value" "WS2812B_THT"
-			(at 217.17 105.3398 0)
+			(at 203.2 58.3498 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2156,7 +2229,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D5.0mm-4_RGB_Staggered_Pins"
-			(at 205.74 116.84 0)
+			(at 191.77 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2166,7 +2239,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 207.01 118.745 0)
+			(at 193.04 71.755 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2176,7 +2249,7 @@
 			)
 		)
 		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
-			(at 204.47 109.22 0)
+			(at 190.5 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2213,7 +2286,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f04d4555-be04-4384-acfd-833fc1629be1")
 		(property "Reference" "U1"
 			(at 134.2233 57.15 0)
@@ -2234,7 +2306,7 @@
 			)
 		)
 		(property "Footprint" "m5stamp:STAMP-S3-2_54-DIP"
-			(at 78.74 100.33 0)
+			(at 127.254 114.046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
