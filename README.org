@@ -14,8 +14,26 @@ For more background on this project see: https://glow-energy.io
 - GitHub: https://github.com/PaulSchulz/esphome-pulse
 - Clone: ~git clone git@github.com:PaulSchulz/esphome-pulse.git~
 
-* Development
-TBD
+* Software
+** Common YAML files
+The firmware makes use of a master file, with a collection of shared YAML files
+in 'common/'.
+
+** Using the secrets.html
+A dummy 'secrets' file has been included in the repository. Edit it to match
+your Wifi and Hom Assistant API credentials.
+
+Please do not include this file in any pull requests.
+
+To ensure this, I include the foillowing alias in my .git/config file
+#+begin_quote
+[alias]
+    ignore = update-index --assume-unchanged
+    unignore = update-index --no-assume-unchanged
+    ignored = !git ls-files -v | grep "^[[:lower:]]"
+#+end_quote
+and then set changes to this file to be ignored by git in future commits.
+
 
 * License
 
