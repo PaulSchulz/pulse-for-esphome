@@ -26,14 +26,24 @@ your Wifi and Hom Assistant API credentials.
 Please do not include this file in any pull requests.
 
 To ensure this, I include the foillowing alias in my .git/config file
-#+begin_quote
+
+#+begin_example
 [alias]
     ignore = update-index --assume-unchanged
     unignore = update-index --no-assume-unchanged
     ignored = !git ls-files -v | grep "^[[:lower:]]"
-#+end_quote
+#+end_example
+
 and then set changes to this file to be ignored by git in future commits.
 
+#+begin_src sh
+DIR$ git ignore esphome/secrets.yaml
+DIR$ git ignored
+h esphome/secrets.yaml
+#+end_src
+
+Multiple alternative local secrets files in 'esphome/' can created using filenames of the form
+'secrets-ID.yaml'. This are set to be ignored in '.gitignore'.
 
 * License
 
