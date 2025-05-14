@@ -5204,7 +5204,7 @@
 		(uuid "e4aa65d2-ae10-4fc2-a520-6e1b5115df66")
 	)
 	(gr_text "ESPHome Pulse"
-		(at 107.43 63.29 0)
+		(at 76.32 65.65 0)
 		(layer "B.SilkS")
 		(uuid "6f45ca93-e031-43b8-803f-56e2465edeee")
 		(effects

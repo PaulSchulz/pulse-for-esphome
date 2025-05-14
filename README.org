@@ -1,0 +1,25 @@
+#+TITLE: esphome-pulse
+#+AUTHOR: Paul Schulz
+#+OPTIONS: toc:nil num:nil
+
+* Overview
+
+This is an [[https://esphome.io][ESPHome]] project called *esphome-=pulse*=, based on the **Home Assistant Glow**
+which was originally created in 2011. 
+
+For more background on this project see: https://glow-energy.io
+
+* Repository
+
+- GitHub: https://github.com/PaulSchulz/esphome-pulse
+- Clone: ~git clone git@github.com:PaulSchulz/esphome-pulse.git~
+
+* Development
+TBD
+
+* License
+
+This project is licensed under the MIT License. See the [[file:LICENSE][LICENSE]] file for details.
+
+* Resources
+ TBD
