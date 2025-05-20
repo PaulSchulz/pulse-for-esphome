@@ -4,10 +4,16 @@
 
 * Overview
 
-This is an [[https://esphome.io][ESPHome]] project called *esphome-=pulse*=, based on the **Home Assistant Glow**
+This is an [[https://esphome.io][ESPHome]] project called *esphome-pulse*, based on the **Home Assistant Glow**
 which was originally created in 2011. 
 
 For more background on this project see: https://glow-energy.io
+
+This project is still a *Work-In-Progress*
+
+[[file:images/esphome-pulse-pcb-front.jpeg]]
+
+[[file:images/esphome-pulse-pcb-back.jpeg]]
 
 * Repository
 
@@ -34,16 +40,17 @@ To ensure this, include the following alias in your .git/config file
     ignored = !git ls-files -v | grep "^[[:lower:]]"
 #+end_example
 
-and then set changes to this file to be ignored by git in future commits.
+and then set changes to this file to be ignored by git in future commits on the
+CLI with:
 
 #+begin_src sh
-DIR$ git ignore esphome/secrets.yaml
-DIR$ git ignored
+$ git ignore esphome/secrets.yaml
+$ git ignored
 h esphome/secrets.yaml
 #+end_src
 
-Multiple alternative local secrets files in 'esphome/' can created using
-filenames of the form 'secrets-ID.yaml'. This are set to be ignored in
+Multiple alternative local secrets files in 'esphome/' can stored by using
+filenames of the form 'secrets-ID.yaml'. These are set to be ignored in
 '.gitignore', and can be copied to override 'secrets.yaml' as required.
 
 * License
