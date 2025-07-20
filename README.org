@@ -1,10 +1,10 @@
-#+TITLE: esphome-pulse
+#+TITLE: Pulse Meter Sensor for ESPHome
 #+AUTHOR: Paul Schulz
 #+OPTIONS: toc:nil num:nil
 
 * Overview
 
-This is an [[https://esphome.io][ESPHome]] project called *esphome-pulse*, based on the **Home Assistant Glow**
+This is an [[https://esphome.io][ESPHome]] project called *esphome-pulse*, based on the Home Assistant Glow
 which was originally created in 2011. 
 
 For more background on this project see: https://glow-energy.io
@@ -16,11 +16,16 @@ This project is still a *Work-In-Progress*
 [[file:images/esphome-pulse-pcb-back.jpeg]]
 
 * Repository
-
 - GitHub: https://github.com/PaulSchulz/esphome-pulse
 - Clone: ~git clone git@github.com:PaulSchulz/esphome-pulse.git~
 
-* Software
+* Hardware Development
+** Kicad
+
+Kicad has been used to create a printed circuit board (PCB) which is used t
+mount the microcontroller and connector for the 'flash' sensor (photo diode).
+
+* Software Development
 ** Common YAML files
 The firmware makes use of a master file, with a collection of shared YAML files
 in 'common/'.
@@ -54,8 +59,17 @@ filenames of the form 'secrets-ID.yaml'. These are set to be ignored in
 '.gitignore', and can be copied to override 'secrets.yaml' as required.
 
 * License
-
 This project is licensed under the MIT License. See the [[file:LICENSE][LICENSE]] file for details.
 
 * Resources
  TBD
+
+* Acknowledgments and Thankyous
+The project would not have been possible without the help and assistance of the
+following people and groups:
+
+- Robert Hart and the Port Adelaide Enfield Council Library - IoT Experimenters Group
+- Ewan Parsons, from V3G
+- Klaas Schout, and the original Home Assistant Glow project
+
+  
