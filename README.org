@@ -11,9 +11,9 @@ For more background on this project see: https://glow-energy.io
 
 This project is still a *Work-In-Progress*
 
-[[file:images/esphome-pulse-pcb-front.jpeg]]
+[[file:images/esphome-pulse-pcb-front.jpg]]
 
-[[file:images/esphome-pulse-pcb-back.jpeg]]
+[[file:images/esphome-pulse-pcb-back.jpg]]
 
 * Repository
 - GitHub: https://github.com/PaulSchulz/esphome-pulse
