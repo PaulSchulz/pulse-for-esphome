@@ -1,29 +1,36 @@
 ---
-# Heom Pulse
+# ESPHome Pulse
 #
 # Read your electricity meter by means of the pulse LED on your
 # meter, useful if you do not have a serial port (P1).
-# Original: © Klaas Schoute
+# Original: © Klaas Schoute - Home Assistant Glow
 # Adaptation: Paul Schulz
 
 substitutions:
   device_name: esphome-pulse
   friendly_name: ESPHome Pulse
-  project_version: "0.0.1"
+  project_version: "1.0.0"
   device_description: |
-    Measure your energy consumption with the pulse LED on your smart meter -
-    ESP32-S3
+    Measure your energy consumption with the pulse LED on your smart meter.
   
   # Define the GPIO pins
-  pulse_pin: GPIO1
+  pulse_pin:  GPIO1
   pulse2_pin: GPIO3
   pulse3_pin: GPIO5
   pulse4_pin: GPIO7
-  status_led: GPIO9
+  pulse_led:  GPIO9
+  status_led: GPIO21
 
 esphome:
-  name: esphome_pulse
-  # name_add_mac_suffix: false
+  name: esphome-pulse
+  name_add_mac_suffix: true
+
+  on_boot:
+    priority: -10
+    then:
+      - text_sensor.template.publish:
+          id: pulse_version
+          state: !lambda 'return {"${project_version}"};'
   
 esp32:
   # board: m5stack-stamps3
@@ -35,30 +42,112 @@ logger:
 
 packages:
   # logger:     !include common/logger.yaml
-  wifi:       !include common/wifi.yaml
+  wifi:       !include common/wifi-improv.yaml
   ota:        !include common/ota.yaml
   api:        !include common/api.yaml
   web_server: !include common/web_server.yaml
-  status:     !include common/status.yaml
 
   pulse_meter:  !include components/pulse_meter.yaml
 
-  remote_package:
-    url: https://github.com/klaasnicolaas/home-assistant-glow/
-    ref: "4.2.3"
-    files:
-      - components/basis.yaml
+  #remote_package:
+  #  url: https://github.com/klaasnicolaas/home-assistant-glow/
+  #  ref: "4.2.3"
+  #  files:
+    #  - components/basis.yaml
     #  - components/updates.yaml
     #  - components/status_led.yaml
     #  - components/pulse_meter.yaml
 
 ###################################################################################
+script:
+  - id: pulse
+    then:
+      - light.addressable_set:
+          id: pulse_led
+          range_from: 0
+          range_to: 1
+          red: 100%
+          green: 100%
+          blue: 100%
+      - delay: 50ms
+      - light.addressable_set:
+          id: pulse_led
+          range_from: 0
+          range_to: 1
+          red: 0%
+          green: 0%
+          blue: 0%
+###################################################################################
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "User Button"
+    id: user_button
+    disabled_by_default: false
+    on_multi_click:
+      - timing:
+          - ON for at least 4s
+        then:
+          - light.addressable_set:
+              id: status_led
+              range_from: 0
+              range_to: 1
+              red: 100%
+              green: 100%
+              blue: 100%
+          - delay: 50ms
+          - light.addressable_set:
+              id: status_led
+              range_from: 0
+              range_to: 1
+              red: 0%
+              green: 0%
+              blue: 0%
+          - button.press: reset
+
+###################################################################################
 light:
   - platform: esp32_rmt_led_strip
-    rgb_order: RGB
-    pin: GPIO09
+    rgb_order: GRB
+    pin: ${status_led}
     num_leds: 1
     rmt_channel: 0
     chipset: ws2812
-    name: "Status Pulse"
-    
+    name: "Status LED"
+    id: status_led
+
+  - platform: esp32_rmt_led_strip
+    rgb_order: RGB
+    pin: ${pulse_led}
+    num_leds: 1
+    rmt_channel: 1
+    chipset: ws2812
+    name: "Pulse LED"
+    id: pulse_led
+    color_correct: [85%,85%,85%]
+
+button:
+  - platform: template
+    name: "Test Pulse"
+    on_press:
+      -  script.execute: pulse
+    # Restarted the ESP
+  - platform: restart
+    name: "Restart - Pulse"
+
+  - platform: factory_reset
+    name: Restart with Factory Default Settings
+    id: reset
+
+text_sensor:
+  - platform: template
+    name: "ESPHome Pulse - Installed version"
+    id: pulse_version
+    icon: "mdi:label-outline"
+    entity_category: diagnostic
+    lambda: |-
+      return {"${project_version}"};
+    update_interval: 6h

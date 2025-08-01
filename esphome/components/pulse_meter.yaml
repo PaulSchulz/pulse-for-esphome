@@ -65,7 +65,10 @@ sensor:
       # multiply value = (60 / imp value) * 1000
       # - multiply: 60
       - lambda: return x * ((60.0 / id(select_pulse_rate).state) * 1000.0);
-
+    on_value:
+      then:
+        -  script.execute: pulse
+        
     total:
       id: sensor_total_energy
       name: '${friendly_name} - Total Energy'
@@ -92,3 +95,9 @@ sensor:
     filters:
       # Multiplication factor from W to kW is 0.001
       - multiply: 0.001
+      
+# Enable time component to reset daily energy at midnight
+# https://esphome.io/components/time/homeassistant.html
+time:
+  - platform: homeassistant
+    id: homeassistant_time
