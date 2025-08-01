@@ -16,10 +16,14 @@ The first version of this hardware and software has been released.
 
 * Hardware Development
 ** Kicad
-Kicad has been used to create a printed circuit board (PCB) which is used t
-mount the microcontroller and connector for the 'flash' sensor (photo diode).
+Kicad has been used to create a printed circuit board (PCB) which is used to
+mount the microcontroller and connector for the 'flash' sensor (photodiode).
 
 See: [[kicad]]
+
+[[file:images/esphome-pulse-pcb-front.jpg]]
+[[file:images/esphome-pulse-pcb-back.jpg]]
+
 
 * Software Development
 
