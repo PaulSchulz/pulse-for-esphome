@@ -5,34 +5,37 @@
 * Overview
 
 This is an [[https://esphome.io][ESPHome]] project called *esphome-pulse*, based on the Home Assistant Glow
-which was originally created in 2011. 
+which was originally created in 2011. (For more background on this project see: [[https://glow-energy.io]] )
 
-For more background on this project see: https://glow-energy.io
+The first version of this hardware and software has been released.
 
-This project is still a *Work-In-Progress*
-
-[[file:images/esphome-pulse-pcb-front.jpg]]
-
-[[file:images/esphome-pulse-pcb-back.jpg]]
+[[file:images/installed-for-testing.jpg]]
 
 * Repository
 - GitHub: https://github.com/PaulSchulz/esphome-pulse
-- Clone: ~git clone git@github.com:PaulSchulz/esphome-pulse.git~
 
 * Hardware Development
 ** Kicad
-
 Kicad has been used to create a printed circuit board (PCB) which is used t
 mount the microcontroller and connector for the 'flash' sensor (photo diode).
 
+See: [[kicad]]
+
 * Software Development
+
+See: [[esphome]]
+
 ** Common YAML files
 The firmware makes use of a master file, with a collection of shared YAML files
 in 'common/'.
 
-** Using the secrets.html
-A dummy 'secrets' file has been included in the repository. Edit it to match
-your Wifi and Hom Assistant API credentials.
+** Where is the 'secrets.yaml' file?
+*NOTE:* Wifi configuration is now using the Improv tool to set the Wifi network
+details. This allows the Wifi credentials to be set, using either a USB Serial
+connection, or Bluetooth (BLE), from a webpage in a browser. See: [[https://improv-wifi.com]]
+
+A dummy 'secrets.yaml' file has been included in the repository. Edit it to match
+your Wifi and Home Assistant API credentials.
 
 Please do not include this file in any pull requests.
 
@@ -70,6 +73,6 @@ following people and groups:
 
 - Robert Hart and the Port Adelaide Enfield Council Library - IoT Experimenters Group
 - Ewan Parsons, from V3G
-- Klaas Schout, and the original Home Assistant Glow project
+- Klaas Schout, and the original Home Assistant Glow project ([[https://glow-energy.io]])
 
   
