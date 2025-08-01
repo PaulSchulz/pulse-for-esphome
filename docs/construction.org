@@ -1,0 +1,68 @@
+#+TITLE: Hardware Assembly
+
+* Bill of Materials
+
+** Controller
+- M5Stamp-S3 with 2.54mm header pins
+  See: https://shop.m5stack.com/products/m5stamps3-with-2-54-header-pin
+  Price: US$7.50
+  
+- ESPHome-Pulse PCB
+  
+- Barrel Socket - 4 connector
+  
+- RGB LED, WS2812 (default color order - RGB)
+  Pin order: 5V, Data-Out, GND, Data-In 
+  
+** Sensor
+- Photodiode Sensor
+  Amazon: https://www.amazon.com.au/Photodiode-Module-Brightness-Detection-Photoelectric/dp/B09LVHQ1K5
+  Price: 5pcs for $6.71
+  
+- 4 core barrel plug with lead, pre-assembled
+  3.5mm Audio Cable Connector 4 Pole Male Plug, 30cm total length (+/- 1cm).
+  Aliexpress: https://www.aliexpress.com/item/1005007456025757.html
+  Price: AU$2.12 
+  
+- Heat Shrink
+  - 1x 3mm x 15mm - lead insulator
+  - 4x 2mm x 10mm - individual conductor insulator 
+
+- Enclosure - 3D printed shell
+  
+* Controller
+
+** Soldering
+
+** Case
+
+** Assembly
+
+** Programming
+
+* Sensor
+
+** Solder Lead
+- Insert heat shrink
+- Solder leads
+  Red(VCC,Tip),Black(GND,Base sleeve),White(DO, Ring 1), Green(A0, Ring 2)
+- Process heat shrink
+
+** Assembly
+- Put assembly into enclosure base and slide top to secure.
+
+* Testing
+
+- Connect sensor to controller
+  
+- Connect USB Power supply
+  
+- Connect to Wifi using Wiki Improv, Bluetooth BLE or USB Serial
+  Webpage: https://www.improv-wifi.com
+  
+- Connect to webpage
+  - Confirm that RGB LEDs can be switched and changed color
+    
+- Test pulse sensor by putting sensor in front of top led, and press 'Test
+  Pulse' on webpage interface. Pulse LED should start continiously pulsing,
+  until sensor moved away.
