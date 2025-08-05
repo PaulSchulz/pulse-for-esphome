@@ -9,7 +9,7 @@ which was originally created in 2011. (For more background on this project see: 
 
 The first version of this hardware and software has been released.
 
-[[file:images/installed-for-testing.jpg]]
+[[file:images/installed.jpg]]
 
 * Repository
 - GitHub: https://github.com/PaulSchulz/esphome-pulse
