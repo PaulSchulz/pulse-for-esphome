@@ -53,7 +53,13 @@ sensor:
     device_class: power
     icon: mdi:flash-outline
     accuracy_decimals: 0
-    pin: ${pulse_pin}
+    pin:
+      number: ${pulse_pin}
+      inverted: true
+      mode:
+        input: true
+    internal_filter: 10ms
+    internal_filter_mode: pulse
 #    on_raw_value:
 #      then:
 #        - light.turn_on:
