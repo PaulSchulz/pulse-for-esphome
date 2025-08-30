@@ -1,11 +1,11 @@
-#+TITLE: Pulse Sensor for ESPHome
+#+TITLE: Pulse for ESPHome
 #+AUTHOR: Paul Schulz
 #+OPTIONS: toc:nil num:nil
 
 * Overview
 
 This is an [[https://esphome.io][ESPHome]] project called *pulse-for-esphome*, based on the Home Assistant Glow
-which was originally created in 2011. (For more background on this project see: [[https://glow-energy.io]] )
+which was originally created in 2011. (For more background on this project see: [[https://glow-energy.io]])
 
 The first version of this hardware and software has been released.
 
@@ -32,38 +32,6 @@ See: [[esphome]]
 ** Common YAML files
 The firmware makes use of a master file, with a collection of shared YAML files
 in 'common/'.
-
-** Where is the 'secrets.yaml' file?
-*NOTE:* Wifi configuration is now using the Improv tool to set the Wifi network
-details. This allows the Wifi credentials to be set, using either a USB Serial
-connection, or Bluetooth (BLE), from a webpage in a browser. See: [[https://improv-wifi.com]]
-
-A dummy 'secrets.yaml' file has been included in the repository. Edit it to match
-your Wifi and Home Assistant API credentials.
-
-Please do not include this file in any pull requests.
-
-To ensure this, include the following alias in your .git/config file
-
-#+begin_example
-[alias]
-    ignore = update-index --assume-unchanged
-    unignore = update-index --no-assume-unchanged
-    ignored = !git ls-files -v | grep "^[[:lower:]]"
-#+end_example
-
-and then set changes to this file to be ignored by git in future commits on the
-CLI with:
-
-#+begin_src sh
-$ git ignore esphome/secrets.yaml
-$ git ignored
-h esphome/secrets.yaml
-#+end_src
-
-Multiple alternative local secrets files in 'esphome/' can stored by using
-filenames of the form 'secrets-ID.yaml'. These are set to be ignored in
-'.gitignore', and can be copied to override 'secrets.yaml' as required.
 
 * License
 This project is licensed under the MIT License. See the [[file:LICENSE][LICENSE]] file for details.
