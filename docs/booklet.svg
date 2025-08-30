@@ -26,14 +26,15 @@
      inkscape:document-units="mm"
      showguides="true"
      inkscape:zoom="1.4142136"
-     inkscape:cx="715.23851"
-     inkscape:cy="665.03393"
+     inkscape:cx="414.01101"
+     inkscape:cy="382.19121"
      inkscape:window-width="1878"
      inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"><sodipodi:guide
+     inkscape:current-layer="layer1"
+     showgrid="false"><sodipodi:guide
        position="148.50151,356.67895"
        orientation="1,0"
        id="guide1"
@@ -83,8 +84,8 @@
        id="rect107" /><rect
        x="-255"
        y="-675"
-       width="239"
-       height="317"
+       width="245.36396"
+       height="317.70711"
        id="rect106" /><rect
        x="-211"
        y="-692"
@@ -225,7 +226,7 @@
          id="tspan4"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.316786"
          x="112.38383"
-         y="118.57841">ESPHome-Pulse</tspan></text><g
+         y="118.57841">Pulse for ESPHome</tspan></text><g
        style="fill:none"
        id="g4"
        transform="matrix(0.25797649,0,0,0.25797649,117.43747,183.1589)"><path
@@ -372,73 +373,73 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect106);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
            x="-255"
            y="-662.86836"
-           id="tspan10">Data from the ESPHome-Pulse can be </tspan><tspan
+           id="tspan1">Data from the Pulse for ESPHome can </tspan><tspan
            x="-255"
            y="-646.20174"
-           id="tspan11">seen from the device using the built </tspan><tspan
+           id="tspan2">be seen from the device using the built </tspan><tspan
            x="-255"
            y="-629.53511"
-           id="tspan12">in web server. Visit the web page:
+           id="tspan3">in web server. Visit the web page:
 </tspan><tspan
            x="-255"
            y="-612.86848"
-           id="tspan14">
+           id="tspan6">
 </tspan><tspan
            x="-255"
            y="-596.20186"
-           id="tspan16">http://esphome-pulse-XXXXXX.local
+           id="tspan7">http://pulse-for-esphome-XXXXXX.local
 </tspan><tspan
            x="-255"
            y="-579.53523"
-           id="tspan18">
+           id="tspan8">
 </tspan><tspan
            x="-255"
            y="-562.86861"
-           id="tspan20">where XXXXXX is the individual </tspan><tspan
+           id="tspan9">where XXXXXX is the individual </tspan><tspan
            x="-255"
            y="-546.20198"
-           id="tspan21">identifier for the device (MAC </tspan><tspan
+           id="tspan32">identifier for the device (MAC </tspan><tspan
            x="-255"
            y="-529.53535"
-           id="tspan25">addresss). This should be displayed </tspan><tspan
+           id="tspan33">addresss). This should be displayed </tspan><tspan
            x="-255"
            y="-512.86873"
-           id="tspan26">with the original packaging, but is </tspan><tspan
+           id="tspan36">with the original packaging, but is also </tspan><tspan
            x="-255"
            y="-496.2021"
-           id="tspan27">also displayed in the logs when </tspan><tspan
+           id="tspan39">displayed in the logs when connected </tspan><tspan
            x="-255"
            y="-479.53548"
-           id="tspan28">connected via USB.
+           id="tspan42">via USB.
 </tspan><tspan
            x="-255"
            y="-462.86885"
-           id="tspan29">
+           id="tspan48">
 </tspan><tspan
            x="-255"
            y="-446.20222"
-           id="tspan30">This page will display the data being </tspan><tspan
+           id="tspan49">This page will display the data being </tspan><tspan
            x="-255"
            y="-429.5356"
-           id="tspan37">monitored by the device.
+           id="tspan50">monitored by the device.
 </tspan><tspan
            x="-255"
            y="-412.86897"
-           id="tspan38">
+           id="tspan52">
 </tspan><tspan
            x="-255"
            y="-396.20235"
-           id="tspan40">If you have Home Assistant, this </tspan><tspan
+           id="tspan64">If you have Home Assistant, this device </tspan><tspan
            x="-255"
            y="-379.53572"
-           id="tspan41">device will be automatically detected </tspan><tspan
+           id="tspan127">will be automatically detected as an </tspan><tspan
            x="-255"
            y="-362.86909"
-           id="tspan43">as an ESPHome device.
+           id="tspan128">ESPHome device.
 </tspan><tspan
            x="-255"
            y="-346.20247"
-           id="tspan44">
+           id="tspan163">
 </tspan></text><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.335284"
@@ -458,11 +459,11 @@
          y="0"><tspan
            x="586.31764"
            y="780.70537"
-           id="tspan45">More details, documentation and code on Github 
+           id="tspan164">More details, documentation and code on Github 
 </tspan><tspan
-           x="594.30168"
+           x="585.32032"
            y="794.03874"
-           id="tspan51">https://github.com/PaulSchulz/esphome-pulse</tspan></text><text
+           id="tspan165">https://github.com/PaulSchulz/pulse-for-esphome</tspan></text><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
          x="186.26666"
@@ -472,7 +473,7 @@
            id="tspan142"
            style="stroke-width:0.1"
            x="186.26666"
-           y="205.84583"></tspan></text></g><text
+           y="205.84583" /></text></g><text
        xml:space="preserve"
        style="font-size:6.95766px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.335284"
        x="28.170559"
@@ -832,38 +833,38 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:justify;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect39);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
            x="1045.8105"
            y="-149.08906"
-           id="tspan54"><tspan
+           id="tspan167"><tspan
              dx="0 0 0 0 1.7028966 0 0 0 0 0 0 1.7028947 0 0 0 1.7028947 0 0 0 0 1.7029099 0 0 0 0 1.7028947"
-             id="tspan53">The Improv web page will allow </tspan></tspan><tspan
+             id="tspan166">The Improv web page will allow </tspan></tspan><tspan
            x="1045.8105"
            y="-132.42244"
-           id="tspan56"><tspan
+           id="tspan169"><tspan
              dx="0 0 0 0 4.5990644 0 0 4.5990663 0 0 0 4.5990663 0 0 0 4.5990663 0 0 0 0 4.5990586 0 0 0 0 0 0 0 4.5990739"
-             id="tspan55">you to set the wifi details for </tspan></tspan><tspan
+             id="tspan168">you to set the wifi details for </tspan></tspan><tspan
            x="1045.8105"
            y="-115.75581"
-           id="tspan58"><tspan
+           id="tspan171"><tspan
              dx="0 0 0 0 0 1.4386144 0 0 0 0 1.4386125 0 0 0 0 0 0 0 0 1.4386201 0 0 0 1.4386277"
-             id="tspan57">your wifi network, via Bluetooth </tspan></tspan><tspan
+             id="tspan170">your wifi network, via Bluetooth </tspan></tspan><tspan
            x="1045.8105"
            y="-99.089187"
-           id="tspan59">(BLE) or aUSB Cable (Serial)
+           id="tspan172">(BLE) or aUSB Cable (Serial)
 </tspan><tspan
            x="1045.8105"
            y="-82.422561"
-           id="tspan60">
+           id="tspan173">
 </tspan><tspan
            x="1045.8105"
            y="-65.755935"
-           id="tspan61">Details required:
+           id="tspan174">Details required:
 </tspan><tspan
            x="1045.8105"
            y="-49.089309"
-           id="tspan62">  Wifi Network Name
+           id="tspan175">  Wifi Network Name
 </tspan><tspan
            x="1045.8105"
            y="-32.422683"
-           id="tspan63">  Wifi Password </tspan></text></g><text
+           id="tspan176">  Wifi Password </tspan></text></g><text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text42"
@@ -878,14 +879,14 @@
        style="font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:none;stroke:#000000" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.210498"
-       x="180.15923"
-       y="113.58366"
+       x="182.96556"
+       y="113.77074"
        id="text4-1-3"><tspan
          sodipodi:role="line"
          id="tspan4-5-3"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.210498"
-         x="180.15923"
-         y="113.58366">About the ESPHome-Pulse</tspan></text><text
+         x="182.96556"
+         y="113.77074">About the Pulse for ESPHome</tspan></text><text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text26"
@@ -903,71 +904,71 @@
        y="0"><tspan
          x="575.58398"
          y="533.97734"
-         id="tspan65">The ESPHome-Pulse detects the pulses </tspan><tspan
+         id="tspan177">The Pulse for ESPHome detects the </tspan><tspan
          x="575.58398"
          y="550.64397"
-         id="tspan66">from your electricity meter and makes </tspan><tspan
+         id="tspan178">pulses from your electricity meter and </tspan><tspan
          x="575.58398"
          y="567.31059"
-         id="tspan72">this data available via Wifi for energy </tspan><tspan
+         id="tspan179">makes this data available via Wifi for </tspan><tspan
          x="575.58398"
          y="583.97722"
-         id="tspan73">monitoring in real time.
+         id="tspan180">energy monitoring in real time.
 </tspan><tspan
          x="575.58398"
          y="600.64385"
-         id="tspan75">
+         id="tspan181">
 </tspan><tspan
          x="575.58398"
          y="617.31047"
-         id="tspan76">Monitoring the household electricity </tspan><tspan
+         id="tspan182">Monitoring the household electricity </tspan><tspan
          x="575.58398"
          y="633.9771"
-         id="tspan77">meter will allow you to know how much </tspan><tspan
+         id="tspan183">meter will allow you to know how much </tspan><tspan
          x="575.58398"
          y="650.64372"
-         id="tspan78">power you are consuming as you use </tspan><tspan
+         id="tspan184">power you are consuming as you use </tspan><tspan
          x="575.58398"
          y="667.31035"
-         id="tspan81">your appliances.
+         id="tspan185">your appliances.
 </tspan><tspan
          x="575.58398"
          y="683.97698"
-         id="tspan82">
+         id="tspan186">
 </tspan><tspan
          x="575.58398"
          y="700.6436"
-         id="tspan84"><tspan
+         id="tspan188"><tspan
            style="font-weight:bold"
-           id="tspan83">Features:
+           id="tspan187">Features:
 </tspan></tspan><tspan
          x="575.58398"
          y="717.31023"
-         id="tspan85">* Simple to install
+         id="tspan189">* Simple to install
 </tspan><tspan
          x="575.58398"
          y="733.97685"
-         id="tspan86">* No Internet, subscriptions or other
+         id="tspan190">* No Internet, subscriptions or other
 </tspan><tspan
          x="575.58398"
          y="750.64348"
-         id="tspan87">    services required
+         id="tspan191">    services required
 </tspan><tspan
          x="575.58398"
          y="767.31011"
-         id="tspan90">* Immediate access via a Web Browser
+         id="tspan192">* Immediate access via a Web Browser
 </tspan><tspan
          x="575.58398"
          y="783.97673"
-         id="tspan93">* Works with Home Asssitant for long
+         id="tspan193">* Works with Home Asssitant for long
 </tspan><tspan
          x="575.58398"
          y="800.64336"
-         id="tspan94">    term data storage and energy
+         id="tspan194">    term data storage and energy
 </tspan><tspan
          x="575.58398"
          y="817.30998"
-         id="tspan98">    management
+         id="tspan195">    management
 </tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.210498"
@@ -987,125 +988,125 @@
        y="0"><tspan
          x="863.37695"
          y="471.04375"
-         id="tspan102"><tspan
+         id="tspan198"><tspan
            style="font-weight:bold"
-           id="tspan99">You will need:</tspan><tspan
+           id="tspan196">You will need:</tspan><tspan
            style="font-size:12px"
-           id="tspan100">
+           id="tspan197">
 </tspan></tspan><tspan
          x="863.37695"
          y="487.71037"
-         id="tspan104"><tspan
+         id="tspan200"><tspan
            style="font-size:12px"
-           id="tspan103">- An Electricity Meter with a pulse LED
+           id="tspan199">- An Electricity Meter with a pulse LED
 </tspan></tspan><tspan
          x="863.37695"
          y="504.377"
-         id="tspan106"><tspan
+         id="tspan202"><tspan
            style="font-size:12px"
-           id="tspan105">- Double sided tape
+           id="tspan201">- Double sided tape
 </tspan></tspan><tspan
          x="863.37695"
          y="521.04363"
-         id="tspan108"><tspan
+         id="tspan204"><tspan
            style="font-size:12px"
-           id="tspan107">- USB-C Power Supply or Battery
+           id="tspan203">- USB-C Power Supply or Battery
 </tspan></tspan><tspan
          x="863.37695"
          y="537.71025"
-         id="tspan110"><tspan
+         id="tspan206"><tspan
            style="font-size:12px"
-           id="tspan109">- Household Wifi Network (2.4GHz)
+           id="tspan205">- Household Wifi Network (2.4GHz)
 </tspan></tspan><tspan
          x="863.37695"
          y="554.37688"
-         id="tspan112"><tspan
+         id="tspan208"><tspan
            style="font-size:12px"
-           id="tspan111">- Web browser to view data
+           id="tspan207">- Web browser to view data
 </tspan></tspan><tspan
          x="863.37695"
          y="571.0435"
-         id="tspan114"><tspan
+         id="tspan210"><tspan
            style="font-size:12px"
-           id="tspan113">
+           id="tspan209">
 </tspan></tspan><tspan
          x="863.37695"
          y="587.71013"
-         id="tspan116"><tspan
+         id="tspan212"><tspan
            style="font-size:12px"
-           id="tspan115">* Locate your household electricity meter
+           id="tspan211">* Locate your household electricity meter
 </tspan></tspan><tspan
          x="863.37695"
          y="604.37676"
-         id="tspan118"><tspan
+         id="tspan214"><tspan
            style="font-size:12px"
-           id="tspan117">   and find the Pulse LED.
+           id="tspan213">   and find the Pulse LED.
 </tspan></tspan><tspan
          x="863.37695"
          y="621.04338"
-         id="tspan120"><tspan
+         id="tspan216"><tspan
            style="font-size:12px"
-           id="tspan119">* Check the pulse rate for your electricity 
+           id="tspan215">* Check the pulse rate for your electricity 
 </tspan></tspan><tspan
          x="863.37695"
          y="637.71001"
-         id="tspan122"><tspan
+         id="tspan218"><tspan
            style="font-size:12px"
-           id="tspan121">   meter. (This is typically 1000 pulses per 
+           id="tspan217">   meter. (This is typically 1000 pulses per 
 </tspan></tspan><tspan
          x="863.37695"
          y="654.37663"
-         id="tspan124"><tspan
+         id="tspan220"><tspan
            style="font-size:12px"
-           id="tspan123">   kWh, the default setting.)
+           id="tspan219">   kWh, the default setting.)
 </tspan></tspan><tspan
          x="863.37695"
          y="671.04326"
-         id="tspan126"><tspan
+         id="tspan222"><tspan
            style="font-size:12px"
-           id="tspan125">* With double sided tape, secure the 
+           id="tspan221">* With double sided tape, secure the 
 </tspan></tspan><tspan
          x="863.37695"
          y="687.70989"
-         id="tspan130"><tspan
+         id="tspan224"><tspan
            style="font-size:12px"
-           id="tspan129">   sensor (photo diode) directly over the 
+           id="tspan223">   sensor (photo diode) directly over the 
 </tspan></tspan><tspan
          x="863.37695"
          y="704.37651"
-         id="tspan132"><tspan
+         id="tspan226"><tspan
            style="font-size:12px"
-           id="tspan131">   meters pulse LED.
+           id="tspan225">   meters pulse LED.
 </tspan></tspan><tspan
          x="863.37695"
          y="721.04314"
-         id="tspan138"><tspan
+         id="tspan228"><tspan
            style="font-size:12px"
-           id="tspan137">* Plug the sensor into the controller, and 
+           id="tspan227">* Plug the sensor into the controller, and 
 </tspan></tspan><tspan
          x="863.37695"
          y="737.70976"
-         id="tspan141"><tspan
+         id="tspan230"><tspan
            style="font-size:12px"
-           id="tspan139">   plug in USB-C for power.
+           id="tspan229">   plug in USB-C for power.
 </tspan></tspan><tspan
          x="863.37695"
          y="754.37639"
-         id="tspan144"><tspan
+         id="tspan232"><tspan
            style="font-size:12px"
-           id="tspan143">* Once powered, use Improv to configure 
+           id="tspan231">* Once powered, use Improv to configure 
 </tspan></tspan><tspan
          x="863.37695"
          y="771.04302"
-         id="tspan146"><tspan
+         id="tspan234"><tspan
            style="font-size:12px"
-           id="tspan145">   the Wifi network details (next page). 
+           id="tspan233">   the Wifi network details (next page). 
 </tspan></tspan><tspan
          x="863.37695"
          y="787.70964"
-         id="tspan148"><tspan
+         id="tspan236"><tspan
            style="font-size:12px"
-           id="tspan147">
+           id="tspan235">
 </tspan></tspan></text><text
        xml:space="preserve"
        transform="scale(0.26458333)"
@@ -1120,7 +1121,7 @@
          id="tspan34"
          style="stroke-width:0.264583"
          x="271.83984"
-         y="177.73424"></tspan><tspan
+         y="177.73424" /><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
          id="tspan35"
@@ -1155,7 +1156,7 @@
          id="tspan46"
          style="stroke-width:0.264583"
          x="199.24944"
-         y="190.08208"></tspan><tspan
+         y="190.08208" /><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
          id="tspan47"
@@ -1181,45 +1182,45 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:justify;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect43-4);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
            x="40.304688"
            y="465.3875"
-           id="tspan150"><tspan
+           id="tspan238"><tspan
    style="font-weight:bold"
-   id="tspan149">Warnings</tspan>
+   id="tspan237">Warnings</tspan>
 </tspan><tspan
            x="40.304688"
            y="482.05412"
-           id="tspan151">
+           id="tspan239">
 </tspan><tspan
            x="40.304688"
            y="498.72075"
-           id="tspan153"><tspan
+           id="tspan241"><tspan
              dx="0 0 0 0 0 0 0 2.7201104 0 0 0 2.7201066 0 2.7201066 0 0 0 0 0 0 0 0 2.7201066"
-             id="tspan152">Always use a licenced electrician </tspan></tspan><tspan
+             id="tspan240">Always use a licenced electrician </tspan></tspan><tspan
            x="40.304688"
            y="515.38738"
-           id="tspan155"><tspan
+           id="tspan243"><tspan
              dx="0 0 0 0 0 10.164568 0 0 0 0 0 0 0 0 0 10.164564 0 0 10.164564"
-             id="tspan154">when accessing or modifying </tspan></tspan><tspan
+             id="tspan242">when accessing or modifying </tspan></tspan><tspan
            x="40.304688"
            y="532.054"
-           id="tspan156">household electrical wiring. 
+           id="tspan244">household electrical wiring. 
 </tspan><tspan
            x="40.304688"
            y="548.72063"
-           id="tspan157">
+           id="tspan245">
 </tspan><tspan
            x="40.304688"
            y="565.38725"
-           id="tspan159"><tspan
+           id="tspan247"><tspan
              dx="0 0 0 7.6587415 0 0 0 7.6587396 0 0 0 0 7.6587358 0 0 0 0 7.6587358 0 0 0 0 7.6587358"
-             id="tspan158">Do not lift over high voltage </tspan></tspan><tspan
+             id="tspan246">Do not lift over high voltage </tspan></tspan><tspan
            x="40.304688"
            y="582.05388"
-           id="tspan161"><tspan
+           id="tspan249"><tspan
              dx="0 0 0 0 0 0 5.7801003 0 0 0 0 0 5.7800965 0 0 0 0 0 0 0 5.7801042 0 5.7800889"
-             id="tspan160">power lines without a network </tspan></tspan><tspan
+             id="tspan248">power lines without a network </tspan></tspan><tspan
            x="40.304688"
            y="598.72051"
-           id="tspan162">access permit. </tspan></text></g><use
+           id="tspan250">access permit. </tspan></text></g><use
        x="0"
        y="0"
        xlink:href="#g64"
