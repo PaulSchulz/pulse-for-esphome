@@ -1,15 +1,16 @@
 ---
-# ESPHome Pulse
+# Pulse for ESPHome
 #
 # Read your electricity meter by means of the pulse LED on your
 # meter, useful if you do not have a serial port (P1).
-# Original: © Klaas Schoute - Home Assistant Glow
-# Adaptation: Paul Schulz
+#
+# Original Project: © Klaas Schoute - Home Assistant Glow
+# Adaptation "Pulse for ESPHome": Paul Schulz
 
 substitutions:
-  device_name: esphome-pulse
-  friendly_name: ESPHome Pulse
-  project_version: "1.0.1"
+  device_name: pulse-for-esphome
+  friendly_name: Pulse for ESPHome
+  project_version: "1.0.0"
   device_description: |
     Measure your energy consumption with the pulse LED on your smart meter.
   
@@ -22,7 +23,7 @@ substitutions:
   status_led: GPIO21
 
 esphome:
-  name: esphome-pulse
+  name: pulse-for-esphome
   name_add_mac_suffix: true
 
   on_boot:
@@ -144,7 +145,7 @@ button:
 
 text_sensor:
   - platform: template
-    name: "ESPHome Pulse - Installed version"
+    name: "Pulse for ESPHome - Installed version"
     id: pulse_version
     icon: "mdi:label-outline"
     entity_category: diagnostic
