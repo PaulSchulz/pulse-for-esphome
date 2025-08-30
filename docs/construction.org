@@ -1,7 +1,6 @@
 #+TITLE: Hardware Assembly
 
 * Bill of Materials
-
 ** Controller
 - M5Stamp-S3 with 2.54mm header pins
   See: https://shop.m5stack.com/products/m5stamps3-with-2-54-header-pin
