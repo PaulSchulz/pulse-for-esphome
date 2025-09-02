@@ -7,7 +7,9 @@
 This is an [[https://esphome.io][ESPHome]] project called *pulse-for-esphome*, based on the Home Assistant Glow
 which was originally created in 2011. (For more background on this project see: [[https://glow-energy.io]])
 
-The first version of this hardware and software has been released.
+The first version of this device (hardware and firmware) has been released and
+is available as a kit or completed unit. As it is also open hardware, you can
+also use these files to create your own device.
 
 [[file:images/installed.jpg]]
 
@@ -17,21 +19,24 @@ The first version of this hardware and software has been released.
 * Hardware Development
 ** Kicad
 Kicad has been used to create a printed circuit board (PCB) which is used to
-mount the microcontroller and connector for the 'flash' sensor (photodiode).
+mount the microcontroller and connector for the 'flash' sensor (photodiode)
+and pulse LED (for monitoring).
 
 See: [[kicad]]
 
 [[file:images/esphome-pulse-pcb-front.jpg]]
 [[file:images/esphome-pulse-pcb-back.jpg]]
 
+** M5StampS3 Microcontroller Board
+
+The M5StampS3 is a microcontroller board, using the ESP32-S3 microcontroller
+(MCU) which is a very capable processor for running ESPHome firmware. [[https://m5stack.com/][M5Stack]]
+have mounted the processor, WiFi antenna, USB-C connector, Button and Status LED in a
+very handy [[https://shop.m5stack.com/products/m5stamps3a-with-1-27-header-pin][inexpensive package]].
 
 * Software Development
 
-See: [[esphome]]
-
-** Common YAML files
-The firmware makes use of a master file, with a collection of shared YAML files
-in 'common/'.
+See: [[esphome/]]
 
 * License
 This project is licensed under the MIT License. See the [[file:LICENSE][LICENSE]] file for details.
