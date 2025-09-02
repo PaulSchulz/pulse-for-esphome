@@ -1,4 +1,0 @@
-light:
-  - platform: status_led
-    name: "Status LED"
-    pin: GPIO21
