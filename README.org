@@ -26,10 +26,10 @@ See: [[kicad]]
 
 #+ATTR_HTML: :width 300px
 #+ATTR_ORG: :width 300px
-[[file:images/pulse-for-esphome-pcb-front.jpg]]
+[[file:images/pulse-for-esphome-pcb-front.png]]
 
 #+ATTR_HTML: :width 300px
-[[file:images/pulse-for-esphome-pcb-back.jpg]]
+[[file:images/pulse-for-esphome-pcb-back.png]]
 
 ** M5StampS3 Microcontroller Board
 
