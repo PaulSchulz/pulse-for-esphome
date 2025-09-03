@@ -1,9 +1,19 @@
 #+TITLE: Pulse for ESPHome
 #+AUTHOR: Paul Schulz
-#+OPTIONS: toc:nil num:nil
 
-* Overview
+* Contents :TOC:
+- [[#introduction][Introduction]]
+- [[#repository][Repository]]
+- [[#hardware-development][Hardware Development]]
+  - [[#kicad][Kicad]]
+  - [[#m5stamps3-microcontroller-board][M5StampS3 Microcontroller Board]]
+- [[#software-development-with-esphome][Software Development with ESPHome]]
+- [[#construction][Construction]]
+- [[#license][License]]
+- [[#resources][Resources]]
+- [[#acknowledgments-and-thankyous][Acknowledgments and Thankyous]]
 
+* Introduction
 This is an [[https://esphome.io][ESPHome]] project called *pulse-for-esphome*, based on the Home Assistant Glow
 which was originally created in 2011. (For more background on this project see: [[https://glow-energy.io]])
 
@@ -38,10 +48,11 @@ The M5StampS3 is a microcontroller board, using the ESP32-S3 microcontroller
 have mounted the processor, WiFi antenna, USB-C connector, Button and Status LED in a
 very handy [[https://shop.m5stack.com/products/m5stamps3a-with-1-27-header-pin][inexpensive package]].
 
-* Software Development
+* Software Development with ESPHome
+The firmware for this device uses [[https://esphome.io/][ESPHome]]
 
-See: [[esphome/]]
-
+The YAML files ca be found in the [[esphome]] directory.
+ 
 * Construction
 See: [[file:docs/construction.org][BOM and Hardware Assembly Notes]]
 
