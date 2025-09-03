@@ -24,8 +24,12 @@ and pulse LED (for monitoring).
 
 See: [[kicad]]
 
-[[file:images/esphome-pulse-pcb-front.jpg]]
-[[file:images/esphome-pulse-pcb-back.jpg]]
+#+ATTR_HTML: :width 300px
+#+ATTR_ORG: :width 300px
+[[file:images/pulse-for-esphome-pcb-front.jpg]]
+
+#+ATTR_HTML: :width 300px
+[[file:images/pulse-for-esphome-pcb-back.jpg]]
 
 ** M5StampS3 Microcontroller Board
 

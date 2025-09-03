@@ -21,6 +21,11 @@
 - Photodiode Sensor
   Amazon: https://www.amazon.com.au/Photodiode-Module-Brightness-Detection-Photoelectric/dp/B09LVHQ1K5
   Price: 5pcs for $6.71
+
+  #+ATTR_HTML: :width 300px
+  #+ATTR_ORG: :width 300px
+  [[file:../images/photodiode-board.png]]
+  
   
 - 4 core barrel plug with lead, pre-assembled
   3.5mm Audio Cable Connector 4 Pole Male Plug, 30cm total length (+/- 1cm).
