@@ -38,6 +38,9 @@ very handy [[https://shop.m5stack.com/products/m5stamps3a-with-1-27-header-pin][
 
 See: [[esphome/]]
 
+* Construction
+See: [[file:docs/construction.org][BOM and Hardware Assembly Notes]]
+
 * License
 This project is licensed under the MIT License. See the [[file:LICENSE][LICENSE]] file for details.
 

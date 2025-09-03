@@ -1,7 +1,7 @@
 #+TITLE: Hardware Assembly
 
 * Bill of Materials
-** Controller
+** Controller Assembly
 - M5Stamp-S3 with 2.54mm header pins
   See: https://shop.m5stack.com/products/m5stamps3-with-2-54-header-pin
   Price: US$7.50
@@ -11,9 +11,13 @@
 - Barrel Socket - 4 connector
   
 - RGB LED, WS2812 (default color order - RGB)
-  Pin order: 5V, Data-Out, GND, Data-In 
+  Pin order: 5V, Data-Out, GND, Data-In
+
+- Enclosure - 3D printed shell
+  - [[file:../stl/esphome-pulse-topshell.stl][Topshell]]
+  - [[file:../stl/esphome-pulse-backshell.stl][Backshell]]
   
-** Sensor
+** Sensor Assembly
 - Photodiode Sensor
   Amazon: https://www.amazon.com.au/Photodiode-Module-Brightness-Detection-Photoelectric/dp/B09LVHQ1K5
   Price: 5pcs for $6.71
@@ -24,12 +28,14 @@
   Price: AU$2.12 
   
 - Heat Shrink
-  - 1x 3mm x 15mm - lead insulator
+  - 1x 3mm x 15mm - cable insulator
   - 4x 2mm x 10mm - individual conductor insulator 
 
 - Enclosure - 3D printed shell
+  - [[file:../stl/Sensor_top_side_v1.stl][Top Side]]
+  - [[file:../stl/Sensor_bottom_side_v1.stl][Bottom Side]]
   
-* Controller
+* Controller Unit Assembly
 
 ** Soldering
 
@@ -39,13 +45,17 @@
 
 ** Programming
 
-* Sensor
+* Sensor Unit Assembly
+The photodiode board can be purchased pre-assembled from Amazon, as well a
+pre-assembled plug and tail, which can be purchased from AliExpress. The
+required tasks are to solder the plug and tail to the board, with heat-shrink,
+and 3D print and assemble the enclosure.
 
-** Solder Lead
-- Insert heat shrink
+** Attach the lead to the photodiode sensor board
+- Insert heat-shrink onto end of  
 - Solder leads
   Red(VCC,Tip),Black(GND,Base sleeve),White(DO, Ring 1), Green(A0, Ring 2)
-- Process heat shrink
+- Apply heat to the heat shrink
 
 ** Assembly
 - Put assembly into enclosure base and slide top to secure.
