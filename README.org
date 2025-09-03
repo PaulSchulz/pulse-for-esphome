@@ -51,7 +51,7 @@ very handy [[https://shop.m5stack.com/products/m5stamps3a-with-1-27-header-pin][
 * Software Development with ESPHome
 The firmware for this device uses [[https://esphome.io/][ESPHome]]
 
-The YAML files ca be found in the [[esphome]] directory.
+The YAML files can be found in the [[esphome]] directory.
  
 * Construction
 See: [[file:docs/construction.org][BOM and Hardware Assembly Notes]]
