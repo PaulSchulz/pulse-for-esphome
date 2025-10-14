@@ -1,9 +1,10 @@
-#+TITLE: Pulse for ESPHome
+\#+TITLE: Pulse for ESPHome
 #+AUTHOR: Paul Schulz
 
 * Contents :TOC:
 - [[#introduction][Introduction]]
 - [[#repository][Repository]]
+- [[#software-and-utilities][Software and Utilities]]
 - [[#hardware-development][Hardware Development]]
   - [[#kicad][Kicad]]
   - [[#m5stamps3-microcontroller-board][M5StampS3 Microcontroller Board]]
@@ -25,6 +26,9 @@ also use these files to create your own device.
 
 * Repository
 - GitHub: https://github.com/PaulSchulz/pulse-for-esphome
+
+* Software and Utilities
+
 
 * Hardware Development
 ** Kicad
