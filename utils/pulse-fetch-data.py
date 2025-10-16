@@ -59,8 +59,8 @@ def main():
             total_watt_hours_out = values_wh["total_watt_hours_out"]
 
             row = [
-                now_utc.strftime("%d/%m/%Y %H:%M:%S"),
-                now_local.strftime("%d/%m/%Y %H:%M:%S"),
+                now_utc.strftime("%Y-%m-%d %H:%M:%S"),
+                now_local.strftime("%Y-%m-%d %H:%M:%S"),
                 f"{total_watt_hours_in}",
                 f"{total_watt_hours_out}"
             ]
