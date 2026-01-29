@@ -24,7 +24,7 @@ also use these files to create your own device.
 
 A presentation on the device (with more context) called "Catch the Flash:
 Measuring household power usage" was given at the [[https://2026.everythingopen.au][Everything Open 2026]]
-Conference in Canberra, Australia. Slides are available [[file::docs/presentations/Presentaton_Catch_the_Flash_Jan_2026.pdf][here]].
+Conference in Canberra, Australia. Presentations are available [[docs/presentations][here]].
 
 [[file:images/installed.jpg]]
 
