@@ -31,7 +31,7 @@ esphome:
   name_add_mac_suffix: true
   project:
     name: mawsonlakesorg.${project_name}
-    version: 1.0.2
+    version: 1.0.3
     
   on_boot:
     priority: -10
@@ -52,8 +52,8 @@ dashboard_import:
 
 logger:
 
-packages:
-  pulse_meter:  !include components/pulse_meter.yaml
+#packages:
+#  pulse_meter:  !include components/pulse_meter.yaml
 
 wifi:
 improv_serial:
@@ -61,6 +61,12 @@ esp32_improv:
   authorizer: none
 api:
   reboot_timeout: 0min
+  services:
+    - service: reset_total_energy
+      then:
+        - button.press:
+            id: button_reset_total
+
 ota:
   - platform: esphome
   - platform: web_server
@@ -94,6 +100,32 @@ script:
           green: 0%
           blue: 0%
 ###################################################################################
+number:
+  # Set the pulse rate of the LED on your meter
+  - platform: template
+    id: select_pulse_rate
+    name: 'Pulse rate - imp/kWh'
+    optimistic: true
+    mode: box
+    min_value: 100
+    max_value: 10000
+    step: 100
+    restore_value: yes
+    initial_value: 1000
+
+  # Reset total energy to given value
+  - platform: template
+    id: select_reset_total
+    name: 'Reset Value - Total Energy kWh'
+    entity_category: config
+    optimistic: true
+    mode: box
+    min_value: 0
+    max_value: 1000000
+    step: 1
+    initial_value: 0
+
+###################################################################################
 binary_sensor:
   - platform: gpio
     pin:
@@ -126,41 +158,6 @@ binary_sensor:
 
 ###################################################################################
 light:
-#  - platform: esp32_rmt_led_strip
-#    name: "Status LED"
-#    id: status_led
-#    rgb_order: GRB
-#    pin: ${status_led}
-#    num_leds: 1
-#    rmt_channel: 1
-#    chipset: ws2812
-
-#  - platform: esp32_rmt_led_strip
-#    name: "Pulse LED"
-#    id: pulse_led
-#    rgb_order: RGB
-#    pin: ${pulse_led}
-#    num_leds: 1
-#    rmt_channel: 2
-#    chipset: ws2812
-#    color_correct: [85%,85%,85%]
-
-#  - platform: neopixelbus
-#    name: "Status LED"
-#    id: status_led
-#    pin: ${status_led}
-#    type: GRB
-#    variant: WS2812
-#    num_leds: 1
-
-# - platform: neopixelbus
-#   name: "Pulse LED"
-#   id: pulse_led
-#    pin: ${pulse_led}
-#    type: RGB
-#    variant: WS2812
-#    num_leds: 1
-
   - platform: fastled_clockless
     name: "Status LED"
     id: status_led
@@ -168,7 +165,6 @@ light:
     chipset: WS2812
     rgb_order: GRB
     num_leds: 1
-#    default_transition_length: 0s
 
   - platform: fastled_clockless
     name: "Pulse LED"
@@ -177,8 +173,8 @@ light:
     chipset: WS2812
     rgb_order: RGB
     num_leds: 1
-#    default_transition_length: 0s
 
+###################################################################################
 button:
   - platform: template
     name: "Test Pulse"
@@ -192,6 +188,65 @@ button:
     name: Restart with Factory Default Settings
     id: reset
 
+  # Reset the total energy entity
+  - platform: template
+    id: button_reset_total
+    name: "Reset Total Energy"
+    on_press:
+      - pulse_meter.set_total_pulses:
+          id: power_consumption
+          value: !lambda "return id(select_reset_total).state * id(select_pulse_rate).state;"
+
+###################################################################################
+sensor:
+  # Pulse meter
+  - platform: pulse_meter
+    id: power_consumption
+    name: Power Consumption
+    unit_of_measurement: W
+    state_class: measurement
+    device_class: power
+    icon: mdi:flash-outline
+    accuracy_decimals: 0
+    pin:
+      number: ${pulse_pin}
+      inverted: true
+      mode:
+        input: true
+    internal_filter: 10ms
+    internal_filter_mode: pulse
+    filters:
+      - lambda: return x * ((60.0 / id(select_pulse_rate).state) * 1000.0);
+    on_value:
+      then:
+        -  script.execute: pulse
+        
+    total:
+      id: total_energy
+      name: Total Energy
+      unit_of_measurement: kWh
+      icon: mdi:circle-slice-3
+      state_class: total_increasing
+      device_class: energy
+      accuracy_decimals: 3
+      filters:
+        - lambda: return x * (1.0 / id(select_pulse_rate).state);
+
+  # Total day usage
+  - platform: total_daily_energy
+    id: daily_energy
+    name: Daily Energy
+    power_id: power_consumption
+    unit_of_measurement: kWh
+    icon: mdi:circle-slice-3
+    state_class: total_increasing
+    device_class: energy
+    accuracy_decimals: 3
+    filters:
+      # Multiplication factor from W to kW is 0.001
+      - multiply: 0.001
+      
+###################################################################################
 text_sensor:
   - platform: template
     name: "Firmware Version"
@@ -201,3 +256,10 @@ text_sensor:
     lambda: |-
       return {"${project_version}"};
     update_interval: 6h
+
+###################################################################################
+# Enable time component to reset daily energy at midnight
+# https://esphome.io/components/time/homeassistant.html
+time:
+  - platform: homeassistant
+    id: homeassistant_time
