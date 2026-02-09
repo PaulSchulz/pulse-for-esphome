@@ -11,6 +11,7 @@
 #  Paul Schulz
 
 substitutions:
+  project_name: pulse_for_esphome
   device_name: pulse-for-esphome
   friendly_name: Pulse for ESPHome
   project_version: "1.0.0"
@@ -28,7 +29,10 @@ substitutions:
 esphome:
   name: pulse-for-esphome
   name_add_mac_suffix: true
-
+  project:
+    name: mawsonlakesorg.${project_name}
+    version: 1.0.1
+    
   on_boot:
     priority: -10
     then:
@@ -42,18 +46,21 @@ esp32:
   framework:
     type: arduino
 
+dashboard_import:
+  package_import_url: github://PaulSchulz/pulse-for-esphome/esphome/pulse-for-esphome.yaml@main
+  import_full_config: true
+
 logger:
 
 packages:
   pulse_meter:  !include components/pulse_meter.yaml
 
 wifi:
-# Allow provisioning Wi-Fi via Serial USB
 improv_serial:
-# Allow provisioning Wi-Fi via BLE
 esp32_improv:
   authorizer: none
 api:
+  reboot_timeout: 0min
 ota:
   - platform: esphome
   - platform: web_server
@@ -62,6 +69,11 @@ web_server:
   port: 80
   version: 3
   local: true
+
+#mqtt:
+#  broker:   !secret mqtt_broker
+#  username: !secret mqtt_username
+#  password: !secret mqtt_password
 ###################################################################################
 script:
   - id: pulse
