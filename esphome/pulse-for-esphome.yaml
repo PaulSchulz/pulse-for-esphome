@@ -11,10 +11,10 @@
 #  Paul Schulz
 
 substitutions:
-  project_name: pulse_for_esphome
+  project_name: pulse-for-esphome
   device_name: pulse-for-esphome
   friendly_name: Pulse for ESPHome
-  project_version: "1.0.0"
+  project_version: "1.0.6"
   device_description: |
     Measure your energy consumption with the pulse LED on your electricity meter.
   
@@ -31,7 +31,7 @@ esphome:
   name_add_mac_suffix: true
   project:
     name: mawsonlakesorg.${project_name}
-    version: 1.0.5
+    version: ${project_version}
     
   on_boot:
     priority: -10
@@ -245,7 +245,23 @@ sensor:
     filters:
       # Multiplication factor from W to kW is 0.001
       - multiply: 0.001
-      
+
+  # Wifi Sensors
+  - platform: wifi_signal # Reports the WiFi signal strength/RSSI in dB
+    name: "WiFi Signal dB"
+    id: wifi_signal_db
+    update_interval: 60s
+    entity_category: "diagnostic"
+
+  - platform: copy # Reports the WiFi signal strength in %
+    source_id: wifi_signal_db
+    name: "WiFi Signal Percent"
+    filters:
+      - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
+    unit_of_measurement: "Signal %"
+    entity_category: "diagnostic"
+    device_class: ""
+
 ###################################################################################
 text_sensor:
   - platform: template
