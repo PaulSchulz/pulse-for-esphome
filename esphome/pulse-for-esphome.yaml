@@ -14,7 +14,7 @@ substitutions:
   project_name: pulse-for-esphome
   device_name: pulse-for-esphome
   friendly_name: Pulse for ESPHome
-  project_version: "1.0.6"
+  project_version: "1.0.7"
   device_description: |
     Measure your energy consumption with the pulse LED on your electricity meter.
   
@@ -262,6 +262,10 @@ sensor:
     entity_category: "diagnostic"
     device_class: ""
 
+  - platform: internal_temperature
+    name: "Sensor Temperature"
+    id: sensor_temperature
+    
 ###################################################################################
 text_sensor:
   - platform: template
