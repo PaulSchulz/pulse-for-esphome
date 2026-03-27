@@ -1,0 +1,360 @@
+---
+# Pulse2 for ESPHome (pulse2-for-esphome)
+#
+# Read your electricity meter by means of the pulse LED on your
+# meter, useful if you do not have a serial port (P1).
+#
+# This version reads two channels of data for making Import and Export
+# measurements. Based on the original pulse-for-esphome(1.0.7)
+#
+# Original Project: Home Assistant Glow © Klaas Schoute
+# Adaptated for "Pulse for ESPHome"
+#  Paul Schulz
+
+# Change Log
+#
+# 2026-03-25 (1.0.8)  Paul Schulz <poul@mawsonlakes.org>
+#   Add export channel for measuring import/export meters
+#
+# 2026-03-27 (1.0.9)  Paul Schulz <poul@mawsonlakes.org>
+#   Add uptime sensor.
+
+substitutions:
+  organisation_name: mawsonlakesorg
+  project_name: pulse2-for-esphome
+  device_name: pulse2-for-esphome
+  friendly_name: Pulse2 for ESPHome
+  project_version: "1.0.9"
+  device_description: |
+    Measure your energy consumption with the pulse LED on your electricity meter.
+  
+  # Define the GPIO pins
+  pulse_pin:  GPIO1
+  pulse2_pin: GPIO3
+  pulse_led:  GPIO9
+  status_led: GPIO21 # Built in to StampS3 board
+
+esphome:
+  name: ${device_name}
+  name_add_mac_suffix: true
+  project:
+    name: ${organisation_name}.${project_name}
+    version: ${project_version}
+    
+  on_boot:
+    priority: -10
+    then:
+      - text_sensor.template.publish:
+          id: firmware_version
+          state: !lambda 'return {"${project_version}"};'
+  
+esp32:
+  # board: m5stack-stamps3
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+dashboard_import:
+  package_import_url: github://PaulSchulz/pulse-for-esphome/esphome/pulse2-for-esphome.yaml@main
+  import_full_config: false
+
+logger:
+
+#packages:
+#  pulse_meter:  !include components/pulse_meter.yaml
+
+wifi:
+improv_serial:
+esp32_improv:
+  authorizer: none
+api:
+  reboot_timeout: 0min
+  services:
+    - service: reset_total_energy
+      then:
+        - button.press:
+            id: button_reset_total
+
+ota:
+  - platform: esphome
+  - platform: web_server
+
+web_server:
+  port: 80
+  version: 3
+  local: true
+
+#mqtt:
+#  broker:   !secret mqtt_broker
+#  username: !secret mqtt_username
+#  password: !secret mqtt_password
+###################################################################################
+script:
+  - id: pulse
+    then:
+      - light.addressable_set:
+          id: pulse_led
+          range_from: 0
+          range_to: 1
+          red: 100%
+          green: 100%
+          blue: 100%
+      - delay: 50ms
+      - light.addressable_set:
+          id: pulse_led
+          range_from: 0
+          range_to: 1
+          red: 0%
+          green: 0%
+          blue: 0%
+
+  - id: pulse2
+    then:
+      - light.addressable_set:
+          id: pulse_led
+          range_from: 0
+          range_to: 1
+          red: 0%
+          green: 100%
+          blue: 0%
+      - delay: 50ms
+      - light.addressable_set:
+          id: pulse_led
+          range_from: 0
+          range_to: 1
+          red: 0%
+          green: 0%
+          blue: 0%
+###################################################################################
+number:
+  # Set the pulse rate of the LED on your meter
+  - platform: template
+    id: select_pulse_rate
+    name: "Pulse rate - imp per kWh"
+    optimistic: true
+    mode: box
+    min_value: 100
+    max_value: 10000
+    step: 100
+    restore_value: yes
+    initial_value: 1000
+
+  # Reset total energy to given value
+  - platform: template
+    id: select_reset_total
+    name: 'Reset Value - Total Energy kWh'
+    entity_category: config
+    optimistic: true
+    mode: box
+    min_value: 0
+    max_value: 1000000
+    step: 1
+    initial_value: 0
+
+###################################################################################
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "User Button"
+    id: user_button
+    disabled_by_default: false
+    on_multi_click:
+      - timing:
+          - ON for at least 4s
+        then:
+          - light.addressable_set:
+              id: status_led
+              range_from: 0
+              range_to: 1
+              red: 100%
+              green: 100%
+              blue: 100%
+          - delay: 50ms
+          - light.addressable_set:
+              id: status_led
+              range_from: 0
+              range_to: 1
+              red: 0%
+              green: 0%
+              blue: 0%
+          - button.press: reset
+
+###################################################################################
+light:
+  - platform: fastled_clockless
+    name: "Status LED"
+    id: status_led
+    pin: ${status_led}
+    chipset: WS2812
+    rgb_order: GRB
+    num_leds: 1
+
+  - platform: fastled_clockless
+    name: "Pulse LED"
+    id: pulse_led
+    pin: ${pulse_led}
+    chipset: WS2812
+    rgb_order: RGB
+    num_leds: 1
+
+###################################################################################
+button:
+  - platform: template
+    name: "Test Pulse"
+    on_press:
+      -  script.execute: pulse
+    # Restarted the ESP
+  - platform: restart
+    name: "Restart"
+
+  - platform: factory_reset
+    name: Restart with Factory Default Settings
+    id: reset
+
+  # Reset the total energy entity
+  - platform: template
+    id: button_reset_total
+    name: "Reset Total Energy"
+    on_press:
+      - pulse_meter.set_total_pulses:
+          id: power_consumption
+          value: !lambda "return id(select_reset_total).state * id(select_pulse_rate).state;"
+
+###################################################################################
+sensor:
+  # Pulse meter (Import)
+  - platform: pulse_meter
+    id: power_consumption
+    name: Power Consumption
+    unit_of_measurement: W
+    state_class: measurement
+    device_class: power
+    icon: mdi:flash-outline
+    accuracy_decimals: 0
+    pin:
+      number: ${pulse_pin}
+      inverted: true
+      mode:
+        input: true
+    internal_filter: 10ms
+    internal_filter_mode: pulse
+    filters:
+      - lambda: return x * ((60.0 / id(select_pulse_rate).state) * 1000.0);
+    on_value:
+      then:
+        -  script.execute: pulse
+    total:
+      id: total_energy
+      name: Total Energy
+      unit_of_measurement: kWh
+      icon: mdi:circle-slice-3
+      state_class: total_increasing
+      device_class: energy
+      accuracy_decimals: 3
+      filters:
+        - lambda: return x * (1.0 / id(select_pulse_rate).state);
+
+  # Total day usage (Emport)
+  - platform: total_daily_energy
+    id: daily_energy
+    name: Daily Energy
+    power_id: power_consumption
+    unit_of_measurement: kWh
+    icon: mdi:circle-slice-3
+    state_class: total_increasing
+    device_class: energy
+    accuracy_decimals: 3
+    filters:
+      # Multiplication factor from W to kW is 0.001
+      - multiply: 0.001
+
+  # Pulse meter (Export)
+  - platform: pulse_meter
+    id: power_export
+    name: Power Export
+    unit_of_measurement: W
+    state_class: measurement
+    device_class: power
+    icon: mdi:flash-outline
+    accuracy_decimals: 0
+    pin:
+      number: ${pulse2_pin}
+      inverted: true
+      mode:
+        input: true
+    internal_filter: 10ms
+    internal_filter_mode: pulse
+    filters:
+      - lambda: return x * ((60.0 / id(select_pulse_rate).state) * 1000.0);
+    on_value:
+      then:
+        -  script.execute: pulse2
+    total:
+      id: total_energy_export
+      name: Total Energy Export
+      unit_of_measurement: kWh
+      icon: mdi:circle-slice-3
+      state_class: total_increasing
+      device_class: energy
+      accuracy_decimals: 3
+      filters:
+        - lambda: return x * (1.0 / id(select_pulse_rate).state);
+
+  # Total day usage (import)
+  - platform: total_daily_energy
+    id: daily_energy_export
+    name: Daily Energy Export
+    power_id: power_export
+    unit_of_measurement: kWh
+    icon: mdi:circle-slice-3
+    state_class: total_increasing
+    device_class: energy
+    accuracy_decimals: 3
+    filters:
+      # Multiplication factor from W to kW is 0.001
+      - multiply: 0.001
+
+  # Wifi Sensors
+  - platform: wifi_signal # Reports the WiFi signal strength/RSSI in dB
+    name: "WiFi Signal dB"
+    id: wifi_signal_db
+    update_interval: 60s
+    entity_category: "diagnostic"
+
+  - platform: copy # Reports the WiFi signal strength in %
+    source_id: wifi_signal_db
+    name: "WiFi Signal Percent"
+    filters:
+      - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
+    unit_of_measurement: "Signal %"
+    entity_category: "diagnostic"
+    device_class: ""
+
+  - platform: internal_temperature
+    name: "Sensor Temperature"
+    id: sensor_temperature
+
+  - platform: uptime
+    type: seconds
+    name: Uptime
+    
+###################################################################################
+text_sensor:
+  - platform: template
+    name: "Firmware Version"
+    id: firmware_version
+    icon: "mdi:label-outline"
+    entity_category: diagnostic
+    lambda: |-
+      return {"${project_version}"};
+    update_interval: 6h
+
+###################################################################################
+# Enable time component to reset daily energy at midnight
+# https://esphome.io/components/time/homeassistant.html
+time:
+  - platform: homeassistant
+    id: homeassistant_time
